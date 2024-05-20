@@ -6,6 +6,7 @@ import fdcare from "../assets/img/fdcare.png";
 import savenotes from "../assets/img/savenotes.png";
 import mynotesapp from "../assets/img/mynotesapp.jpg";
 import toDoApp from "../assets/img/toDoApp.png";
+import geminiClone from "../assets/img/geminiClone.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -54,6 +55,12 @@ export const Projects = () => {
       description: "A simple To Do App made with React",
       imgUrl: toDoApp,
       repoUrl: "https://github.com/gourabsingha1/todo_app",
+    },
+    {
+      title: "Gemini Clone",
+      description: "Google's Gemini AI clone",
+      imgUrl: geminiClone,
+      repoUrl: "https://github.com/gourabsingha1/Gemini-Clone",
     },
   ];
 
