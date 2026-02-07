@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=Outfit:wght@300;400;700;800&display=swap');
+
+.home-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.mesh-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #0d0d12;
+    transition: all 1s ease;
+}
+
+.mesh-item {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.6;
+    transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.noise-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.15;
+    /* Increased for better visibility as per image */
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.pixel-font {
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+}
+
+.selection-title {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-transform: lowercase;
+}
+
+.selection-subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+}
+
+
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    width: 100%;
+    max-width: 900px;
+    /* Increased for side-by-side layout */
+    padding: 0 1rem;
+}
+
+.options-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .options-grid {
+        flex-direction: column;
+    }
+}
+
+.selection-subtitle-container {
+    text-align: center;
+    width: 100%;
+}
+
+.option-btn {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.selection-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    opacity: 0.8;
+}
+
+.option-btn:hover .selection-title {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.enter-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover .enter-label {
+    color: white;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.option-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Specific button styles */
+.option-btn[href="/minimal"]:hover {
+    border-color: #6fa3e7;
+    box-shadow: 0 0 30px rgba(111, 163, 231, 0.15);
+}
+
+.option-btn[href="/pokemon"]:hover {
+    border-color: #ffcc00;
+    box-shadow: 0 0 30px rgba(255, 204, 0, 0.15);
+}

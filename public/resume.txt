@@ -1,0 +1,55 @@
+GOURAB SINGHA +91-8794451269 | gaurabsingha16@gmail.com | Bangalore, India [Links: LinkedIn | Portfolio]
+
+EDUCATION
+
+National Institute of Technology, Agartala (2021 – 2025)
+
+Bachelor of Technology in Computer Science and Engineering
+
+CGPA: 8
+
+EXPERIENCE
+
+Visa | Software Engineer (June 2025 – Present)
+
+Reduced company creation latency from 3 days to seconds by engineering a scalable event-driven pipeline to replace file-based legacy systems using Kafka and Spring Boot.
+
+Established the blueprint for a successful migration to Fast Data Architecture by deconstructing and mapping complex ETL logic from 15,000+ lines of legacy code using SQL and Stored Procedures.
+
+Verified data consistency across 40+ tables between legacy ETL and new streams by building a custom full-stack dashboard for automated E2E testing and reconciliation using Angular, React, and MySQL.
+
+Reliably captured and stored system events by designing and implementing a decoupled Audit service using Kafka and Relational Databases.
+
+Enhanced accessibility for critical user flows by implementing keyboard navigation and screen reader support to meet WCAG 2.2 standards using HTML, CSS, and JavaScript.
+
+CRED | Backend Engineer Intern (January 2025 – June 2025)
+
+Reduced developer instrumentation effort from 8 hours to 1 hour by building a common Metric Publishing Library that standardized counters and timers using Java, Spring Boot, Datadog, and Grafana.
+
+Fixed interest-calculation mismatches for 10,000+ users by authoring automation tooling to detect and remediate configuration issues using Python orchestration scripts.
+
+Prevented 2,000+ incorrect loan status transitions monthly by implementing robust runtime checks and database-level constraints using Java, Spring Boot, and MySQL.
+
+Implemented compliance checks in loan workflows by defining AML data requirements and collaborating with Finance teams using Java and AWS.
+
+ACHIEVEMENTS
+
+Guardian on LeetCode (1800+ problems) with Global Rank 376 in contests.
+
+Expert on Codeforces with 500+ problems solved.
+
+5-star on CodeChef (400+ problems) with Global Rank 3 and Global Rank 27 in contests.
+
+Open-source contributor: OneBusAway-Android, Anki-Android.
+
+TECHNICAL SKILLS
+
+Languages: C++, Java, C, Dart, Kotlin, Python, SQL, XML, HTML, CSS, JavaScript, TypeScript
+
+Tools: IntelliJ, VS Code, Android Studio, Docker, Kubernetes, Datagrip, GitHub, Postman, Datadog, Grafana, Jenkins, Cursor
+
+Frameworks: Spring Boot, Flutter, Next.js, Angular, JUnit, Express.js, Node.js, React.js, React Native
+
+Cloud/Databases: Supabase, AWS, Kafka, Firebase, MySQL, PostgreSQL, MongoDB, Databricks
+
+Expertise: Monitoring Systems, Accessibility, Mobile Development, Distributed Systems, System Design

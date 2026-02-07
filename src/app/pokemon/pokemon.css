@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Press+Start+2P&family=Quicksand:wght@300;700&display=swap');
+
+.pokemon-theme {
+    --p-yellow: #FFCC00;
+    --p-blue: #0075BE;
+    --p-red: #FF0000;
+    --p-pink: #FF66B2;
+    --p-bg: #80C97F;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #FF66B2, #FFCC00, #80C97F);
+    background-size: 400% 400%;
+    animation: pokemon-gradient 10s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #333;
+    width: 100%;
+    position: relative;
+}
+
+@keyframes pokemon-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.pokemon-theme .pixel-font {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.pokemon-theme .sketch-font {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.pokemon-theme .pokemon-card {
+    background: white;
+    border: 12px solid var(--p-yellow);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.pokemon-theme .pokemon-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-theme .pokemon-card::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.pokemon-theme .poke-ball-loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--p-red) 50%, white 50%);
+    position: relative;
+    border: 4px solid #333;
+    animation: shake 1.25s cubic-bezier(.36, .07, .19, .97) infinite;
+    overflow: hidden;
+}
+
+.pokemon-theme .poke-ball-loader::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #333;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.pokemon-theme .poke-ball-loader::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.pokemon-theme .holographic-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    background-size: 200% 100%;
+}
+
+.pokemon-theme .pokemon-card:hover .holographic-overlay {
+    opacity: 1;
+    animation: holo-slide 2s linear infinite;
+}
+
+@keyframes holo-slide {
+    0% {
+        background-position: 200% 0%;
+    }
+
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+.pokemon-theme .pokedex-ui {
+    background: #DC0A2D;
+    border: 4px solid #333;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-theme .pokedex-screen {
+    background: #333;
+    border: 10px solid #DEDEDE;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #51AD60;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    min-height: 200px;
+    box-shadow: inset 0 0 20px black;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .pokemon-theme .sketch-font {
+        font-size: clamp(2rem, 8vw, 3.5rem) !important;
+    }
+
+    .pokemon-theme .challenger-title {
+        font-size: 2.5rem !important;
+    }
+
+    .pokemon-theme .trainer-card-container,
+    .pokemon-theme .trainer-intro-container {
+        min-width: 100% !important;
+    }
+
+    .pokemon-theme .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+        gap: 1.5rem !important;
+    }
+
+    .pokemon-theme .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 1.5rem !important;
+    }
+
+    .pokemon-theme .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)) !important;
+    }
+
+    .pokemon-theme nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem !important;
+        text-align: center;
+    }
+
+    .pokemon-theme nav .sketch-font {
+        font-size: 1.5rem !important;
+    }
+
+    .pokemon-theme main {
+        padding: 1rem !important;
+    }
+
+    .pokemon-theme section {
+        margin-bottom: 5rem !important;
+        gap: 2rem !important;
+    }
+
+    .pokemon-theme .pokedex-ui {
+        padding: 1rem;
+        min-width: auto !important;
+    }
+
+    .pokemon-theme .pokedex-screen {
+        min-height: auto;
+        padding: 0.8rem;
+    }
+
+    .pokemon-theme .pokemon-card {
+        padding: 1rem;
+        border-width: 8px;
+    }
+
+    .pokemon-theme .modal-content {
+        padding: 1.5rem !important;
+        border-width: 8px !important;
+        border-radius: 20px !important;
+    }
+
+    .pokemon-theme .modal-content .sketch-font {
+        font-size: 2.5rem !important;
+        margin-top: 2rem;
+    }
+
+    .pokemon-theme .modal-close {
+        top: 1rem !important;
+        right: 1rem !important;
+        padding: 0.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon-theme .pixel-font {
+        font-size: 0.6rem !important;
+    }
+
+    .pokemon-theme .badge-case {
+        gap: 2rem !important;
+    }
+
+    .pokemon-theme .badge-case>a>div {
+        padding: 1.5rem !important;
+        max-width: 160px !important;
+    }
+}
